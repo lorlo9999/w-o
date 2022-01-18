@@ -1,3 +1,10 @@
+from astropy.io import fits
+from astropy.stats import SigmaClip
+from photutils.background import Background2D, MedianBackground
+from photutils.aperture import CircularAperture
+from photutils.aperture import aperture_photometry
+
+
 #open the aligned images
 hdulist = fits.open("stacked_final.fits")
 dat = hdulist[0].data
